@@ -1,0 +1,12 @@
+<h1><%= @project.name %></h1>
+<p><b>Actual Funding: <%= overal_funding(@project) %></b></p>
+<p><b>Expected time to get fully funded: <%= calculate_funding_time(@project) %> Day(s)</b></p>
+<p>Funding Progress From <%= l(@project.capture_details.order(:time).first.get_formated_date, format: '%B %d %Y') %> - <%= l(@project.capture_details.order(:time).last.get_formated_date, format: '%B %d %Y') %>:</p>
+<p><%= calculate_funding_progress(@project) %></p>
+<br>
+<p>The Project is online since:</p>
+<p><%= l(@project.capture_details.first.get_formated_date, format: '%B %d %Y') %>  and has been online for <%= project_online_date(@project) %> day(s)</p>
+<br>
+<%= link_to 'Back', @platform %>
+
+<%= @project.capture_details.order(:time).first.get_formated_date %>

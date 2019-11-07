@@ -1,0 +1,10 @@
+<h1><%= @platform.company_name %></h1>
+<p><b>Overall Funding Amount: <%= total_amount_of_invesment(@platform) %></b></p>
+<p><b>The fastest Funded Project: <%= fastest_project(@platform) %></b></p>
+<ul>
+  <% @projects.each do |project| %>
+    <li><%= project.name %> <br> <%= link_to 'Show', platform_project_path(@platform, project) %></li>
+  <% end %>
+</ul>
+<br>
+<%= link_to 'Back', platforms_path %>

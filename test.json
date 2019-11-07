@@ -1,0 +1,15 @@
+{
+ "project": "Project A",
+ "platform": "Company B",
+ "project_details": {
+   "funding_amount": 2500000,
+   "city": "Brandenburg",
+   "developer": "Developer X",
+   "duration_in_months": 24,
+   "interest_rate": "15.00"
+ },
+ "capture_details": {
+   "time": 1493643600000,
+   "amount": 165000
+ }
+}

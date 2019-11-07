@@ -1,0 +1,21 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Platforms</h1>
+<p><b>Fastest funded Platforms: <%= fastest_platform.company_name %></b></p>
+<table>
+  <thead>
+    <tr>
+      <th>Company name</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @platforms.each do |platform| %>
+      <tr>
+        <td><%= platform.company_name %></td>
+        <td><%= link_to 'Show', platform %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
